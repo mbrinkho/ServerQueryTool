@@ -1,0 +1,184 @@
+﻿@model IEnumerable<ServerQueryTool.Models.Server>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDateUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DNSHostName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OperatingSystem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CanonicalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DistinguishedName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADModifiedDateUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADEnabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IPv4Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastLogonDateUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VMHost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPUSockets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPUCores)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FolderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResourcePool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VMVersion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VMID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildTemplate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeletedUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeletedDateUTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDateUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DNSHostName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OperatingSystem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CanonicalName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DistinguishedName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADModifiedDateUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADEnabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IPv4Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastLogonDateUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VMHost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SerialNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPUSockets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPUCores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FolderID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResourcePool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VMVersion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VMID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildTemplate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeletedUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeletedDateUTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
